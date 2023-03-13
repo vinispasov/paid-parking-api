@@ -71,6 +71,7 @@ public class ParkingServiceImpl implements ParkingService {
         return addVehicleToParking(vehicle, parking);
     }
 
+    @Transactional
     @Override
     public void exit(Long parkingId, Long vehicleId) throws VehicleNotFoundException {
         Vehicle vehicle = checkVehicle(vehicleId);

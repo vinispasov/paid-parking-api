@@ -40,7 +40,7 @@ public class ParkingController {
         }
     }
 
-    @GetMapping("/exit/{parkingId}/{vehicleId}")
+    @PostMapping("/exit/{parkingId}/{vehicleId}")
     public ResponseEntity<String> exit(@PathVariable("parkingId") Long parkingId, @PathVariable("vehicleId") Long vehicleId) {
         try {
             parkingService.exit(parkingId, vehicleId);
