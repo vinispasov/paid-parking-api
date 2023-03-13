@@ -19,6 +19,7 @@ The positive scenario of the request is given as an example, of course there cou
 Big part of the corner cases are handled. You can try to test the app with bad data. 
 
 1.Create parking
+
 First of all you should create Parking with the following request:
 
 POST http://localhost:8080/api/parking/create
@@ -40,6 +41,7 @@ response:
 
 
 2.Enter parking
+
 You can use the parkingId from previous response to enter this parking. In the requestBody you can chose what is the vehicle type - "CAR" or "BUS".
 
 POST http://localhost:8080/api/parking/enter/3252
@@ -55,6 +57,7 @@ Vehicle with id 14903 entered successfully!
 
 
 3.Exit parking
+
 Now you can exit the parking with the parkingId and the vehicleId from the previous response.
 
 POST http://localhost:8080/api/parking/exit/3252/14903
@@ -66,6 +69,7 @@ Vehicle with id 14903 exit successfully!
 
 
 4.Report of sales by date range 
+
 You can check the report for the sales between two dates. It shows the revenue for CAR/BUS separately.
 
 POST http://localhost:8080/api/sale/range
@@ -83,6 +87,7 @@ response:
 
 
 5.Report with revenue for each date of a month by given year and month.
+
 You can check the revenue report for sales for each day by given year and month.
 Of course each month has different count of days. Notice that the 13th day has revenue amount of 1.00.
 
